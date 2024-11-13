@@ -1,6 +1,5 @@
 .git
 .gitignore
-target
 dist
 .env
 .DS_Store
