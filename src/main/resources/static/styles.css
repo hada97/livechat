@@ -1,3 +1,13 @@
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+
 body {
     background-color: #000000;
     color: white;
