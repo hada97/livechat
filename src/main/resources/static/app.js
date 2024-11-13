@@ -6,7 +6,7 @@ stompClient.onConnect = (frame) => {
     setConnected(true);
     console.log('Connected: ' + frame);
     stompClient.subscribe('/topics/livechat', (message) => {
-        updateLiveChat(JSON.parse(message.body).content);
+        updateLiveChat(message.body);  // Acessa diretamente o body da mensagem
     });
 };
 
@@ -24,8 +24,7 @@ function setConnected(connected) {
     $("#disconnect").prop("disabled", !connected);
     if (connected) {
         $("#conversation").show();
-    }
-    else {
+    } else {
         $("#conversation").hide();
     }
 }
@@ -45,16 +44,31 @@ function sendMessage() {
         destination: "/app/new-message",
         body: JSON.stringify({'user': $("#user").val(), 'message': $("#message").val()})
     });
-    $("#message").val("");
+    $("#message").val("");  // Limpa o campo de mensagem após envio
 }
 
 function updateLiveChat(message) {
-    $("#livechat").append("<tr><td>" + message + "</td></tr>");
+    // Parse o JSON para acessar a propriedade "message"
+    const msgObject = JSON.parse(message);  // Converte o JSON em um objeto JavaScript
+    const messageContent = msgObject.message;  // Acessa o conteúdo da propriedade "message"
+
+    // Adiciona o espaço após ":"
+    const formattedMessage = messageContent.replace(":", ": ");
+
+    $("#livechat").append("<tr><td>" + formattedMessage + "</td></tr>");
 }
 
 $(function () {
     $("form").on('submit', (e) => e.preventDefault());
-    $( "#connect" ).click(() => connect());
-    $( "#disconnect" ).click(() => disconnect());
-    $( "#send" ).click(() => sendMessage());
+    $("#connect").click(() => connect());
+    $("#disconnect").click(() => disconnect());
+    $("#send").click(() => sendMessage());
+
+    // Envia a mensagem ao pressionar Enter
+    $("#message").keypress((e) => {
+        if (e.which === 13) {  // 13 é o código da tecla Enter
+            sendMessage();
+            e.preventDefault();  // Impede a quebra de linha
+        }
+    });
 });
