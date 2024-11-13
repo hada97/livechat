@@ -1,5 +1,5 @@
 const stompClient = new StompJs.Client({
-    brokerURL: 'ws://' + window.location.host + '/buildrun-livechat-websocket'
+    brokerURL: 'ws://' + window.location.host + '/livechat-web'
 });
 
 stompClient.onConnect = (frame) => {
