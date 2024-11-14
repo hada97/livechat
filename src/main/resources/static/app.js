@@ -1,6 +1,10 @@
 const stompClient = new StompJs.Client({
-    brokerURL: 'ws://' + window.location.host + '/livechat-web'
+  brokerURL:
+    window.location.hostname === "localhost"
+      ? "ws://" + window.location.host + "/livechat-web"
+      : "wss://chat-01-334224fb68f6.herokuapp.com/livechat-web", // Corrigido a URL do WebSocket
 });
+
 
 stompClient.onConnect = (frame) => {
     setConnected(true);
