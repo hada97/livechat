@@ -1,4 +1,3 @@
-
 .silkscreen-regular {
   font-family: "Silkscreen", sans-serif;
   font-size: 30px;
@@ -7,159 +6,182 @@
   color: white;
 }
 
-
 body {
-    background-color: #000000;
-    color: white;
-    font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  color: white;
+  font-family: "Arial", sans-serif;
 }
 
 #main-content {
-    margin-top: 100px;
-    background-color: #1f2044;
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+  margin-top: 100px;
+  background-color: #1f2044;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 h2 {
-    color: #6968d4;
-    text-align: center;
-    margin-bottom: 20px;
+  color: #6968d4;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+/* Atualizando gap para 5px nas classes de containers empilhados */
 .form-inline {
-    display: flex;
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    align-items: center;
-    flex-wrap: wrap;  /* Permite que os itens se movam para a linha seguinte */
-    padding: 10px 0;
-    
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+  padding: 10px 0;
+  gap: 5px; /* Alterado para 5px entre os itens */
 }
 
+.form-conect {
+  margin-top: 5px;
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+  padding: 10px 0;
+  gap: 5px; /* Alterado para 5px entre os itens */
+}
+
+/* Ajustando o espaço entre os inputs */
 .form-inline input:first-child {
-    margin-right: 15px; /* Ajuste esse valor para definir o espaço entre os inputs */
+  margin-right: 5px; /* Ajustando o espaço entre os inputs */
 }
-
 
 .form-control {
-    border-radius: 25px;
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #6968d4;
-    background-color: transparent;
-    color: white;
-    height: 40px;
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #6968d4;
+  background-color: transparent;
+  color: white;
+  height: 40px;
+  margin-bottom: 5px; /* Garantindo 5px de espaçamento entre os inputs */
 }
 
 .form-control::placeholder {
-    color: #c2c2c2;
+  color: #c2c2c2;
 }
 
+/* Ajustando o espaço entre os botões */
 .btn {
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  height: 40px;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px; /* Alterado para 5px entre os botões */
 }
 
 .btn-connect {
-    background-color: #28a745;
-    color: white;
+  background-color: #28a745;
+  color: white;
 }
 
 .btn-connect:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 .btn-disconnect {
-    background-color: #dc3545;
-    color: white;
+  background-color: #dc3545;
+  color: white;
 }
 
 .btn-disconnect:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }
 
 .btn-primary {
-    background-color: #6968d4;
-    color: white;
+  background-color: #6968d4;
+  color: white;
 }
 
 .btn-primary:hover {
-    background-color: #5756b8;
+  background-color: #5756b8;
 }
 
 .btn:disabled {
-    background-color: #bdbdbd;
-}
-
-#message-input {
-    margin-top: 20px;
-}
-
-#message-input input {
-    border-radius: 25px;
-    padding: 10px 20px;
-    width: calc(100% - 120px);
-    margin-right: 10px;
-}
-
-#message-input button {
-    border-radius: 25px;
-    padding: 10px 30px;
-}
-
-#conversation {
-    border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-top: 20px;
+  background-color: #bdbdbd;
 }
 
 #conversation th {
-    background-color: #6968d4; /* Cor do fundo */
-    color: white;              /* Cor do texto */
-    text-align: center;
-    box-shadow: none;          /* Remove qualquer sombra */
-    border: none;              /* Remove qualquer borda */
-    padding: 10px;             /* Ajuste o padding conforme necessário */
+  background-color: #44456e; /* Cor do fundo */
+  color: white; /* Cor do texto */
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 10px;
 }
 
-
 #conversation td {
-    background-color: #2f3055;
-    color: white;
-    padding: 10px;
+  background-color: #2f3055;
+  color: white;
+  padding: 10px;
 }
 
 #conversation tr:nth-child(even) {
-    background-color: #3a3b66;
+  background-color: #3a3b66;
 }
 
 #conversation tr:hover {
-    background-color: #44456e;
+  background-color: #44456e;
 }
 
+#conversation {
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 10px;
+
+}
+
+#conversation th, #conversation td {
+  border: 1px solid #44456e; /* Cor mais escura para as bordas */
+}
+
+
 #livechat {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .message-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .message-text {
-    font-size: 16px;
-    color: white;
+  font-size: 16px;
+  color: white;
 }
 
 .message-time {
-    font-size: 12px;
-    color: #c2c2c2;
+  font-size: 12px;
+  color: #c2c2c2;
+  margin-top: 5px;
+  text-align: right;
+}
+
+#send {
+  width: 100px; /* Define a largura do botão Send para 100px */
+}
+
+@media (max-width: 768px) {
+  .form-conect {
     margin-top: 5px;
-    text-align: right;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+    padding: 10px 0;
+    gap: 5px; /* Alterado para 5px entre os itens */
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 5px; /* Garantir 5px de espaçamento entre os inputs em telas pequenas */
+  }
+
+  #message-input input {
+    width: 100%;
+    margin-bottom: 5px; /* Garantir 5px de espaçamento entre o input e o botão de enviar */
+  }
 }
