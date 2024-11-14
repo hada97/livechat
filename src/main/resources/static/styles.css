@@ -32,7 +32,9 @@ h2 {
     display: flex;
     justify-content: flex-start; /* Alinha os itens à esquerda */
     align-items: center;
+    flex-wrap: wrap;  /* Permite que os itens se movam para a linha seguinte */
     padding: 10px 0;
+    
 }
 
 .form-inline input:first-child {
