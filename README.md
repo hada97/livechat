@@ -2,7 +2,7 @@
 
 ## 💻 Sobre o Projeto
 
-[Veja como ficou em Produção!](https://livechat-huf7g3fne9cqhyf3.canadacentral-01.azurewebsites.net/)
+[Veja como ficou em Produção!](https://chat-01-334224fb68f6.herokuapp.com/)
 
 ## ⚙️ Funcionalidades
 
