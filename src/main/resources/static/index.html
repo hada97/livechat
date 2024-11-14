@@ -10,6 +10,12 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
     <script src="/app.js"></script>
+    <style>
+        /* Alinhar a nova linha com os botões à direita */
+        .row.connect-disconnect {
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
 <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! WebSocket relies on Javascript being enabled. Please enable Javascript and reload this page!</h2></noscript>
@@ -21,37 +27,43 @@
         </div>
     </div>
 
+    <!-- Nova linha para os botões Connect e Disconnect, alinhada à direita -->
+    <div class="row connect-disconnect">
+        <div class="col-md-12">
+            <form class="form-conect">
+            <button id="connect" class="btn btn-connect">Connect</button>
+            <button id="disconnect" class="btn btn-disconnect" disabled>Disconnect</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Linha com os campos de entrada para usuário e mensagem, e o botão Send -->
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <form class="form-inline">
                 <div class="form-group">
                     <input type="text" id="user" class="form-control" placeholder="Digite seu usuário...">
                 </div>
-                <div class="form-group">
-                    <input type="text" id="message" class="form-control" placeholder="Digite sua menssagem...">
-                </div>
-            </form>
-        </div>
-        <div class="col-md-6 text-right">
-            <button id="connect" class="btn btn-connect">Connect</button>
-            <button id="disconnect" class="btn btn-disconnect" disabled="disabled">Disconnect</button>
-        </div>
-    </div>
 
-    <div class="row" id="message-input">
-        <div class="col-md-12">
-            <form class="form-inline">
-                <button id="send" class="btn btn-primary" type="submit">Send</button>
+                <div class="form-group">
+                    <input type="text" id="message" class="form-control" placeholder="Digite sua mensagem...">
+                </div>
+
+                <div class="send">
+                    <button id="send" class="btn btn-primary" type="submit">Send</button>
+                </div>
+
             </form>
         </div>
     </div>
+    
 
     <div class="row">
         <div class="col-md-12">
             <table id="conversation" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Live Chat</th>
+                    <th>Chat</th>
                 </tr>
                 </thead>
                 <tbody id="livechat">
