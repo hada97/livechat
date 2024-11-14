@@ -13,6 +13,9 @@ body {
 }
 
 #main-content {
+  max-width: 930px;
+  width: 100%;
+  margin: 0 auto;
   margin-top: 100px;
   background-color: #1f2044;
   border-radius: 12px;
@@ -26,7 +29,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Atualizando gap para 5px nas classes de containers empilhados */
+
 .form-inline {
   margin-top: 5px;
   display: flex;
@@ -43,7 +46,7 @@ h2 {
   gap: 5px; /* Alterado para 5px entre os itens */
 }
 
-/* Ajustando o espaço entre os inputs */
+
 .form-inline input:first-child {
   margin-right: 5px; /* Ajustando o espaço entre os inputs */
 }
@@ -64,7 +67,6 @@ h2 {
   color: #c2c2c2;
 }
 
-/* Ajustando o espaço entre os botões */
 .btn {
   height: 40px;
   border-radius: 25px;
@@ -132,7 +134,7 @@ h2 {
 #conversation {
   border-radius: 15px;
   overflow: hidden;
-  margin-top: 10px;
+  margin-top: 10px;]
 
 }
 
@@ -166,7 +168,7 @@ h2 {
   width: 100px; /* Define a largura do botão Send para 100px */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .form-conect {
     margin-top: 5px;
     flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
